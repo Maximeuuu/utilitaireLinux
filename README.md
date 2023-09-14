@@ -1,5 +1,6 @@
 # utilitaireLinux
 Ensemble de petites commandes et paramètres utiles sur une distribution linux. 
+L'ensemble des commandes sont adaptées à mon utilisation et à l'OS debian.
 
 ## Configuration du shell
 fichier : ``.bashrc``
