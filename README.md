@@ -25,3 +25,5 @@ fichiers :
 * ``JavaClasse.sh`` : initialiser un code de classe pour java
 * ``postgressql.sh`` : connection à psql
 
+## Commandes
+``chmod u+x Interfaces/*.sh Outils/*.sh``
