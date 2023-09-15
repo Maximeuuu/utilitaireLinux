@@ -23,7 +23,7 @@ alias mysql='$repOutilBash/postgressql.sh'
 alias editclasspath='gedit ~/.bashrc'
 
 alias explorateur='$repOutilBash/Explorateur.sh'
-alias naviguer='$repScriptsBash/Interfaces/Arborescence.sh'
+alias naviguer='. $repScriptsBash/Interfaces/Arborescence.sh'
 
 alias TP='$repScriptsBash/Interfaces/TP_AUTO.sh'
 
