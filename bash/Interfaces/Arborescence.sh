@@ -1,13 +1,17 @@
 #!/bin/bash
 #Script permettant de se balader dans la console
-
-# coder une partie permettant de mettre un paramètre facultatif du répertoire d'origine lors de l'appel
+# paramètre 1 : ouverture d'un nouveau terminal
+# paramètre 2 : emplacement par défaut
 
 clear
-
 echo -e "\033[7;37m""Explorateur de fichier\n""\033[0m"
 echo -e "<entrer> pour sortir,\n .. pour revenir en arrière,\n ~ pour "$USER"\n"
-cd ~
+
+if [ $# -le 1 ]; then
+	cd .
+else
+	cd "$2"
+fi
 
 ls --color=auto
 read action
@@ -35,4 +39,7 @@ while [ "$action" != "" ]; do
 	read action
 done
 
-mate-terminal
+# ouvre dans un nouveau terminal si param1 égal à "true"
+if [ "$1" == "true" ]; then
+	mate-terminal
+fi
