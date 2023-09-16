@@ -27,6 +27,8 @@ alias naviguer='. $repScriptsBash/Interfaces/Arborescence.sh'
 
 alias TP='$repScriptsBash/Interfaces/TP_AUTO.sh'
 
+alias enum='$repScriptsBash/Outils/enumFic.sh'
+
 #commande d'aide
 alias helpenv='echo -e "\033[40m
         * helpenv : ?
