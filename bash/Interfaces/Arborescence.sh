@@ -18,21 +18,21 @@ read action
 
 while [ "$action" != "" ]; do
 
-#	if test "$action"* -d; then
-#		cd "$action"*
-#	elif test "$action"* -f; then
-#		cat "$action"*
-#	elif test *"$action"* -d; then
-#		cd "$action"*
-#	elif test *"$action"* -f; then
-#		cat "$action"*
-#	else
-#		echo "Aucun répertoire trouvé"
-#	fi
-	
-	cd "$action"*
-	
 	clear
+	
+	# affiche le premier élément commencant par l'ensemble de lettres donné
+	saisie=$(echo "$action"* | cut -d ' ' -f1 | head -n 1)
+	#saisie=$(ls -a | grep "$action"* | cut -d ' ' -f1) #1ere version de la commande
+	echo $saisie
+	
+	if test -d "$saisie"; then
+		cd $saisie
+	elif test -f "$saisie"; then
+		cat $saisie | less -N --mouse
+	else
+		echo "Aucun élément trouvé"
+	fi
+ 
 	echo -e "\033[7;31mEmplacement : "$(pwd)
 	echo -e "\033[0m"
 	ls --color=auto
