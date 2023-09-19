@@ -19,6 +19,7 @@ fichiers :
 
 ### Outils
 fichiers :
+* ``CD.sh`` : ajout d'une commande cd + ls
 * ``Edit.sh`` : modification du comportement de "gedit"
 * ``Explorateur.sh`` : ouverture de l'explorateur de fichier "caja"
 * ``Java.sh`` : initialiser un code de base pour java
