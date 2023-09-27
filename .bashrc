@@ -27,6 +27,7 @@ alias CD='. $repAlias/CD.sh'
 alias CHMOD='$repAlias/CHMOD.sh'
 alias explorateur='$repAlias/EXPLORATEUR.sh'
 alias GCC='$repAlias/GCC.sh'
+alias JAVAC='$repAlias/JAVAC.sh'
 
 ### Interfaces
 alias naviguer='. $repInterfaces/Arborescence.sh'
