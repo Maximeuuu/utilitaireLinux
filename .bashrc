@@ -11,25 +11,37 @@ export REDIR_JAVA=$HOME/TP/java/paquetage_class
 
 ## Repertoires
 repScriptsBash="bash"
-repOutilBash='$repScriptsBash/Outils'
+
+repAlias="$repScriptsBash/Alias"
+repDebian="$repScriptsBash/Debian"
+repInterfaces="$repScriptsBash/Interfaces"
+repOutils="$repScriptsBash/Outils"
 
 # ------------------------------------------------------------------------------------------------ #
 
 ## Commandes personnelles
-alias javamain='$repOutilBash/Java.sh'
-alias javaclasse='$repOutilBash/JavaClasse.sh'
-alias mysql='$repOutilBash/postgressql.sh'
 
-alias editclasspath='gedit ~/.bashrc'
+### Alias
+alias CD='. $repAlias/CD.sh'
+alias CHMOD='$repAlias/CHMOD.sh'
+alias explorateur='$repAlias/EXPLORATEUR.sh'
+alias GCC='$repAlias/GCC.sh'
 
-alias explorateur='$repOutilBash/Explorateur.sh'
-alias naviguer='. $repScriptsBash/Interfaces/Arborescence.sh'
+### Interfaces
+alias naviguer='. $repInterfaces/Arborescence.sh'
+alias TP='$repInterfaces/TP_AUTO.sh'
 
-alias TP='$repScriptsBash/Interfaces/TP_AUTO.sh'
+### Outils
+alias enum='$repOutils/enumRep.sh'
+alias findDoc='$repOutils/FindDoc.sh'
+alias findExt='$repOutils/FindExt.sh'
+alias javamain='$repOutils/Java.sh'
+alias javaclasse='$repOutils/JavaClasse.sh'
+alias lstSh='$repOutils/LstSh.sh'
+alias mysql='$repOutils/Postgressql.sh'
 
-alias enum='$repScriptsBash/Outils/enumRep.sh'
-
-alias CD='. $repScriptsBash/Outils/CD.sh'
+### Autre
+alias editenv='gedit ~/.bashrc'
 
 # ------------------------------------------------------------------------------------------------ #
 
