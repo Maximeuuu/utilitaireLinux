@@ -3,7 +3,7 @@
 #permet de rendre executables tous les fichiers.sh d'un dossier
 
 if [ $# -eq 1 ]; then
-	rep="$#"
+	rep="$1"
 else
 	rep="."
 fi
@@ -24,7 +24,7 @@ echo -e "\nConfirmer ? [y]es - [n]o"
 read yesno
 
 if [ $yesno = "y" ]; then
-	$(chmod u+x *.sh)
+	$(chmod u+x $rep/*.sh)
 	echo "Commande terminée"
 else
 	echo "Commande annulée"
