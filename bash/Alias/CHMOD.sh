@@ -2,9 +2,20 @@
 
 #permet de rendre executables tous les fichiers.sh d'un dossier
 
-echo "Les fichiers suivant vont être rendus exécutables :"
-listeSh=$(ls *.sh)
+if [ $# -eq 1 ]; then
+	rep="$#"
+else
+	rep="."
+fi
 
+listeSh=$(ls $rep | grep '.sh')
+
+if [ -z "$listeSh" ]; then
+	echo "Aucun fichier .sh trouvé."
+	exit 1
+fi
+
+echo "Les fichiers suivant vont être rendus exécutables :"
 for fic in $listeSh; do
 	echo $fic
 done
